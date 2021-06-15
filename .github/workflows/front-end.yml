@@ -11,17 +11,7 @@ defaults:
     working-directory: src
 
 jobs:
-  build-docker:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag kwetter-frontend:$(date +%s)
-
   docker:
-    needs: 
-     - build-docker
     name: Build and push Docker images
     environment:
       name: docker
