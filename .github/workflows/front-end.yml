@@ -20,8 +20,6 @@ jobs:
       run: docker build . --file Dockerfile --tag kwetter-frontend:$(date +%s)
 
   docker:
-    needs: 
-     - test
     name: Build and push Docker images
     environment:
       name: docker
