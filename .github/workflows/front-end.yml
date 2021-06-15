@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [master]
 
-defaults:
-  run:
-    working-directory: src
-
 jobs:
   docker:
     name: Build and push Docker images
