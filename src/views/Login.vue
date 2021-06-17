@@ -165,6 +165,7 @@ export default {
         .then((result) => {
           let token = result.credential.accessToken;
           let user = result.user;
+          console.log(user.getIdToken());
           this.$router.replace({ name: "Home" });
         })
         .catch((err) => {
